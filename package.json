@@ -7,7 +7,6 @@
     "report": "node .\\cypress\\reporters\\cucumber-html-report.js",
     "cy:clear": "cypress cache clear",
     "cy:install": "set CYPRESS_INSTALL_BINARY=C:\\Users\\Praveen\\Downloads\\cypress.zip && npm install cypress",
-    https://join.skype.com/uLc4GwNeRs4E
     "test:parallel": "cypress run --browser chrome --record --key 6a2fec8b-2c33-4d04-970b-f2004e57f452",
     "test:smoke": "cypress-tags run --browser chrome -e TAGS=",
     "test": "cypress-tags run -e TAGS=@api",
