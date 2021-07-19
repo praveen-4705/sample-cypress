@@ -1,0 +1,56 @@
+{
+  "name": "cypress-automation",
+  "version": "1.0.0",
+  "description": "cypress automation",
+  "main": "index.js",
+  "scripts": {
+    "report": "node .\\cypress\\reporters\\cucumber-html-report.js",
+    "cy:clear": "cypress cache clear",
+    "cy:install": "set CYPRESS_INSTALL_BINARY=C:\\Users\\Praveen\\Downloads\\cypress.zip && npm install cypress",
+    https://join.skype.com/uLc4GwNeRs4E
+    "test:parallel": "cypress run --browser chrome --record --key 6a2fec8b-2c33-4d04-970b-f2004e57f452",
+    "test:smoke": "cypress-tags run --browser chrome -e TAGS=",
+    "test": "cypress-tags run -e TAGS=@api",
+    "cy:tags:regression": "cypress-tags run --browser chrome -e TAGS='@regression'",
+    "echo": "echo -e TAGS=$0"
+  },
+  "keywords": [
+    "cypress",
+    "automation"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cypress/code-coverage": "^3.8.1",
+    "@cypress/instrument-cra": "^1.3.1",
+    "axe-core": "^4.2.2",
+    "axe-html-reporter": "^2.2.2",
+    "cucumber": "^6.0.5",
+    "cucumber-html-reporter": "^5.4.0",
+    "cypress-axe": "^0.12.2",
+    "cypress-cucumber-preprocessor": "^4.1.2",
+    "cypress-image-snapshot": "4.0.0",
+    "cypress-log-to-output": "^1.1.2",
+    "cypress-multi-reporters": "^1.5.0",
+    "cypress-tags": "^0.1.0",
+    "cypress-wait-until": "1.7.1",
+    "lodash": "^4.17.21",
+    "mocha": "^9.0.0",
+    "mochawesome": "^6.2.2",
+    "mochawesome-merge": "^4.2.0",
+    "mochawesome-report-generator": "^5.2.0",
+    "multiple-cucumber-html-reporter": "^1.18.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
+  },
+  "dependencies": {
+    "cypress": "^7.7.0"
+  }
+}

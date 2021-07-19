@@ -1,0 +1,64 @@
+[
+  {
+    "description": "    Feature Description",
+    "keyword": "Feature",
+    "name": "Url Test",
+    "line": 1,
+    "id": "url-test",
+    "tags": [],
+    "uri": "url.feature",
+    "elements": [
+      {
+        "id": "url-test;url-test-sample-\"https://locahost:8080/\"",
+        "keyword": "Scenario",
+        "line": 11,
+        "name": "Url Test Sample \"https://locahost:8080/\"",
+        "tags": [
+          {
+            "name": "@url",
+            "line": 5
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "I open \"https://locahost:8080/\" url",
+            "result": {
+              "status": "failed",
+              "duration": 28168000000,
+              "error_message": "CypressError: `cy.request()` failed trying to load:\n\nhttps://locahost:8080/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: getaddrinfo ENOTFOUND locahost\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: GET\nURL: https://locahost:8080/\n\n-----------------------------------------------------------\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nhttps://on.cypress.io/request\n    at https://www.google.co.in/__cypress/runner/cypress_runner.js:140166:19\n    at tryCatcher (https://www.google.co.in/__cypress/runner/cypress_runner.js:10798:23)\n    at https://www.google.co.in/__cypress/runner/cypress_runner.js:5937:37\n    at tryCatcher (https://www.google.co.in/__cypress/runner/cypress_runner.js:10798:23)\n    at Promise._settlePromiseFromHandler (https://www.google.co.in/__cypress/runner/cypress_runner.js:8733:31)\n    at Promise._settlePromise (https://www.google.co.in/__cypress/runner/cypress_runner.js:8790:18)\n    at Promise._settlePromise0 (https://www.google.co.in/__cypress/runner/cypress_runner.js:8835:10)\n    at Promise._settlePromises (https://www.google.co.in/__cypress/runner/cypress_runner.js:8911:18)\n    at _drainQueueStep (https://www.google.co.in/__cypress/runner/cypress_runner.js:5505:12)\n    at _drainQueue (https://www.google.co.in/__cypress/runner/cypress_runner.js:5498:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://www.google.co.in/__cypress/runner/cypress_runner.js:5514:5)\n    at Async.drainQueues (https://www.google.co.in/__cypress/runner/cypress_runner.js:5384:14)\nFrom Your Spec Code:\n    at _callee3$ (https://www.google.co.in/__cypress/tests?p=cypress\\integration\\common\\google\\url.feature:91:18)\n    at tryCatch (https://www.google.co.in/__cypress/tests?p=cypress\\integration\\common\\google\\url.feature:314:40)\n    at Generator.invoke [as _invoke] (https://www.google.co.in/__cypress/tests?p=cypress\\integration\\common\\google\\url.feature:540:22)\n    at Generator.prototype.<computed> [as next] (https://www.google.co.in/__cypress/tests?p=cypress\\integration\\common\\google\\url.feature:366:21)\n    at asyncGeneratorStep (https://www.google.co.in/__cypress/tests?p=cypress\\integration\\common\\google\\url.feature:170:24)\n    at _next (https://www.google.co.in/__cypress/tests?p=cypress\\integration\\common\\google\\url.feature:192:9)\n    at eval (https://www.google.co.in/__cypress/tests?p=cypress\\integration\\common\\google\\url.feature:199:7)\nat new Promise (<anonymous>)\n    at Context.eval (https://www.google.co.in/__cypress/tests?p=cypress\\integration\\common\\google\\url.feature:188:12)\n    at Context.eval (https://www.google.co.in/__cypress/tests?p=cypress\\integration\\common\\google\\url.feature:105:18)\n\nFrom Node.js Internals:\n  RequestError: Error: getaddrinfo ENOTFOUND locahost\n      at new RequestError (C:\\Users\\Praveen\\AppData\\Local\\Cypress\\Cache\\7.5.0\\Cypress\\resources\\app\\packages\\server\\node_modules\\request-promise-core\\lib\\errors.js:14:15)\n      at Request.plumbing.callback (C:\\Users\\Praveen\\AppData\\Local\\Cypress\\Cache\\7.5.0\\Cypress\\resources\\app\\packages\\server\\node_modules\\request-promise-core\\lib\\plumbing.js:87:29)\n      at Request.RP$callback [as _callback] (C:\\Users\\Praveen\\AppData\\Local\\Cypress\\Cache\\7.5.0\\Cypress\\resources\\app\\packages\\server\\node_modules\\request-promise-core\\lib\\plumbing.js:46:31)\n      at self.callback (C:\\Users\\Praveen\\AppData\\Local\\Cypress\\Cache\\7.5.0\\Cypress\\resources\\app\\packages\\server\\node_modules\\@cypress\\request\\request.js:185:22)\n      at Request.emit (events.js:315:20)\n      at Request.onRequestError (C:\\Users\\Praveen\\AppData\\Local\\Cypress\\Cache\\7.5.0\\Cypress\\resources\\app\\packages\\server\\node_modules\\@cypress\\request\\request.js:877:8)\n      at ClientRequest.emit (events.js:327:22)\n      at TLSSocket.socketErrorListener (_http_client.js:469:9)\n      at TLSSocket.emit (events.js:315:20)\n      at emitErrorNT (internal/streams/destroy.js:106:8)\n      at emitErrorCloseNT (internal/streams/destroy.js:74:3)\n      at processTicksAndRejections (internal/process/task_queues.js:80:21)\n  "
+            }
+          }
+        ]
+      },
+      {
+        "id": "url-test;url-test-sample-\"https://www.google.com\"",
+        "keyword": "Scenario",
+        "line": 12,
+        "name": "Url Test Sample \"https://www.google.com\"",
+        "tags": [
+          {
+            "name": "@url",
+            "line": 5
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "I open \"https://www.google.com\" url",
+            "result": {
+              "status": "passed",
+              "duration": 1242000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

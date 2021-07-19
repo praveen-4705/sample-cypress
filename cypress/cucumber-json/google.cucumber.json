@@ -1,0 +1,32 @@
+[
+  {
+    "description": "    Feature Description",
+    "keyword": "Feature",
+    "name": "Google Test",
+    "line": 1,
+    "id": "google-test",
+    "tags": [],
+    "uri": "google.feature",
+    "elements": [
+      {
+        "id": "google-test;google-test-sample",
+        "keyword": "Scenario",
+        "line": 5,
+        "name": "Google Test Sample",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "I open \"google\" application",
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

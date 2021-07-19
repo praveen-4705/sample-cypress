@@ -1,0 +1,16 @@
+{
+    "baseUrl": "https://www.google.co.in/test.html",
+    "defaultCommandTimeout": 6000,
+    "testFiles": ["**/*.feature", "**/*.spec.js"],
+    "ignoreTestFiles": "**/examples/*.spec.js",
+    "viewportWidth": 1440,
+    "viewportHeight": 900,
+    "chromeWebSecurity": false,
+    "screenshotsFolder": "cypress/screenshots",
+    "projectId": "1z82nn",
+    "env": {
+      "checkAccessibility": true,
+      "TAGS": "@test"
+    }
+  }
+  
