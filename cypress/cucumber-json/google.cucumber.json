@@ -22,7 +22,18 @@
             "line": 6,
             "name": "I open \"google\" application",
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 1569000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "I enter \"Cypress\" in search input",
+            "result": {
+              "status": "passed",
+              "duration": 375000000
             }
           }
         ]

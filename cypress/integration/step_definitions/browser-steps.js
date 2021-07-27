@@ -1,6 +1,7 @@
 import { When, And, Before, Then, After } from 'cypress-cucumber-preprocessor/steps';
 import { config } from './configuration';
 import { createHtmlReport } from 'axe-html-reporter';
+import locators from '../locators/locators';
 
 /**
  * Display violations by page and then write to a json file for reports
@@ -19,9 +20,11 @@ function terminalLog(violations) {
 When('I open {string} application', async function (application) {
   let myConfig = Cypress.config();
   let uri = myConfig.baseUrl;
-
   cy.visit(myConfig.baseUrl, { failOnStatusCode: false });
-  cy.injectAxe();
+});
+
+When('I enter {string} in search input', async function (keyword) {
+  cy.get(locators.searchInput).type(keyword);
 });
 
 Then(/^My "(.*?)" page passes accessibility$/, async function (pageName) {

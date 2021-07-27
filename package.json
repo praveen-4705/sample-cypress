@@ -6,6 +6,7 @@
   "scripts": {
     "report": "node .\\cypress\\reporters\\cucumber-html-report.js",
     "cy:clear": "cypress cache clear",
+    "cy:open": "cypress open",
     "cy:install": "set CYPRESS_INSTALL_BINARY=C:\\Users\\Praveen\\Downloads\\cypress.zip && npm install cypress",
     "test:parallel": "cypress run --browser chrome --record --key 6a2fec8b-2c33-4d04-970b-f2004e57f452",
     "test:smoke": "cypress-tags run --browser chrome -e TAGS=",
@@ -41,7 +42,8 @@
     "multiple-cucumber-html-reporter": "^1.18.0"
   },
   "cypress-cucumber-preprocessor": {
-    "nonGlobalStepDefinitions": true,
+    "nonGlobalStepDefinitions": false,
+    "step_definitions": "cypress/integration/step_definitions/",
     "cucumberJson": {
       "generate": true,
       "outputFolder": "cypress/cucumber-json",

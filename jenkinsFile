@@ -1,0 +1,36 @@
+pipeline {
+    agent none
+    stages{
+        stage('Presteps and Validation') {
+            steps {
+                    sh 'node -v'
+            }
+        }
+        stage('Set Up Stage') {
+            steps {
+                    sh "npm cache verify"
+                    sh "npm  install --cache /tmp/empty-cache"
+            }
+        }
+        stage('Execute the Feature Files') {
+            steps {                  
+                    script {
+                        sh "npm run test:url || npm run report"
+                    }                  
+            }            
+        }
+
+        stage('Publishing Build Report Artifacts') {
+            steps {
+                    publishHTML(target: [
+                        allowMissing         : false,
+                        alwaysLinkToLastBuild: false,
+                        keepAll              : true,
+                        reportDir            : 'cypress/cucumber-json/',
+                        reportFiles          : 'index.html',
+                        reportName           : "AutomationReport_"+params.test_suite 
+                    ])
+            }
+        }
+    }
+}
